@@ -36,4 +36,9 @@ ce document récapitule le mise enplace et la sécurisation du serveur Ubuntu24.
 * **Audit des sockets**: `sudo ss -tulpn` (Seuls les services légitimes sont en écoutes).
 
 EOF
-
+## 3 Vérification de la Surface d'Attaque ( Scan Nmap depuis KALI LINUX)
+* **Port 22/tcp**: Fermé (`closed`).
+* **Port 80/tcp**: Ouvert (`open` -HTTP ).
+* **Port 443/tcp**: Fermé (`closed` -HTTPS non configuré)
+* **Port 2222/tcp**: Ouvert( `opne ` - SSH sécurisé)
+* **65 531 autres ports** : Bloqués/Filtrés par le pare-feu UFW (`filtered`).
