@@ -42,3 +42,17 @@ EOF
 * **Port 443/tcp**: Fermé (`closed` -HTTPS non configuré)
 * **Port 2222/tcp**: Ouvert( `opne ` - SSH sécurisé)
 * **65 531 autres ports** : Bloqués/Filtrés par le pare-feu UFW (`filtered`).
+
+
+
+##### PROJET 4 #####
+* **lors du test de projet**:  le  compte du stagiaire2 (compte existant sur le serveur de fifa) c'est connecter via le PC de mariel IP ADRESS 192.168.3.114
+CONNEXION ÉTABLIE et normal ; puis a fait le scan (`nmap`) et a obtenue les resultat 
+**Port22/tcp**:closed
+**port80/tcp**:open
+**port443/tcp**:closed
+**65 531ports filtrés**: le pare-feu UFW bloque bien tous le reste du trafic
+* **stagiaire2**: a tester les principe de moindre privilège; et a obtenu le resultat (`sudo -l`); USer stagiaire2 is not allowed to run sudo on ubuntu,
+(`cat /etc/shadow`): permission denied.
+* **PC192.168.3.114(PC mariel)**: a executer des connexion avec des comptes non authoriser par le serveur UBUNTU ; il a tester 3 fois est la connexion a été échoué 
+directement par le pare-feu est donc l'addres **192.168.3.144** a été banni par fail2ban depuis le  serveur de PC de FIFA 
